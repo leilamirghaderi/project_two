@@ -1,0 +1,17 @@
+!!!5
+%html{lang: "en"}
+  %head
+    %meta{charset: "UTF-8"}
+    %title ReflectionBoard
+    %meta{name: "viewport", content: "width=device-width,initial-scale=1.0,shrink-to-fit=no"}
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    %header#header
+      %h1 Reflection Board
+      %p.tagline Your reflection is valuable.
+    = yield
+    %footer#footer
+      %small Site design by Leila Mirghaderi. All rights reserved.

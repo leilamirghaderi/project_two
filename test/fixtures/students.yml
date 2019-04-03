@@ -1,0 +1,10 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+leila:
+  firstname: Leila
+  lastname: Mirghaderi
+
+
+mehrdad:
+  firstname: Mehrdad
+  lastname: Sheikholeslami
