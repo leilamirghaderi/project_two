@@ -101,7 +101,7 @@ p {
   font-size: px-to-em(20px);
 }
  /* State Styles (JavaScript-Dependent Styles, Media Queries) */
- @media screen and (min-width: 380px) {
+ @media screen and (min-width: 375px) {
   html {
     margin: px-to-em(35px);
   }
