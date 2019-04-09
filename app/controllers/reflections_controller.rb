@@ -1,6 +1,6 @@
 class ReflectionsController < ApplicationController
   before_action :set_reflection, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user, except: [:index, :show]
   # GET /reflections
   # GET /reflections.json
   def index
