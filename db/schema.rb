@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_03_014722) do
+ActiveRecord::Schema.define(version: 2019_04_03_233532) do
 
   create_table "reflections", force: :cascade do |t|
     t.integer "week"
@@ -27,6 +27,9 @@ ActiveRecord::Schema.define(version: 2019_03_03_014722) do
     t.string "lastname"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "uid", default: ""
+    t.string "nickname", default: ""
+    t.string "email", default: ""
   end
 
 end
