@@ -1,2 +1,23 @@
 class ApplicationController < ActionController::Base
+  helper_method :current_user
+  private
+  # Getter method for current User
+  def current_user
+    @current_user |=Student.find_by(uid: session[:uid])
+  end
+  # Setter method for curent user
+  def current_user=(student)
+    session[:uid]=student.uid
+    session[:name]=student.uid
+  end
+
+  def user_signed_in?
+    !!current_user
+  end
+  def authenticate_user
+    unless user_signed_in?
+      redirect_to login_url, notice: "Please log in first"
+    end
+  end
+  
 end
