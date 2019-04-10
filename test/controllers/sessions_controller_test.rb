@@ -5,5 +5,4 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
     get sessions_create_url
     assert_response :success
   end
-
 end
