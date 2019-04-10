@@ -9,4 +9,10 @@ class SessionsController < ApplicationController
         student.email = omni['info']['email']
       end
   end
+  def login
+  end
+  def logout
+    reset_session
+    redirect_to login_url, notice: "You have been logged out."
+  end
 end
