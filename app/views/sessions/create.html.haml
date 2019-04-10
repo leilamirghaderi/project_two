@@ -1,13 +1,17 @@
 %h1 Let's Create a New Student (Eventually)
 
+%p.greeting= "Hello, #{current_user.name}!"
+
 %h2 Student Info
 %ul
   %li
     %b Name
-    = @student.name
+    = @student.firstname
   %li
     %b Email
     = @student.email
   %li
     %b Username
     = @student.nickname
+
+%h2= link_to 'Log_Out' , logout_url
