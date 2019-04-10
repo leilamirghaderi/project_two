@@ -1,6 +1,6 @@
 class ReflectionsController < ApplicationController
   before_action :set_reflection, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user, except: [:index, :show]
   # GET /reflections
   # GET /reflections.json
   def index
@@ -25,7 +25,7 @@ class ReflectionsController < ApplicationController
   # POST /reflections.json
   def create
     @reflection = Reflection.new(reflection_params)
-
+    @reflection.student = current_user
     respond_to do |format|
       if @reflection.save
         format.html { redirect_to @reflection, notice: 'Reflection was successfully created.' }
@@ -69,6 +69,6 @@ class ReflectionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def reflection_params
-      params.require(:reflection).permit(:week, :title,  :reaction, :student_name)
+      params.require(:reflection).permit(:week, :title,  :reaction)
     end
 end
