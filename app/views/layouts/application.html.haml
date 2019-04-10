@@ -12,6 +12,11 @@
     %header#header
       %h1 Reflection Board
       %p.tagline Your reflection is valuable.
+      - if current_user
+        %p.greeting= "Welcome, #{current_user.name}."
+        %p.logout= link_to 'Click here to log out', logout_url
+
     = yield
+
     %footer#footer
       %small Site design by Leila Mirghaderi. All rights reserved.

@@ -1,0 +1,15 @@
+%h1 Let's Create a New Student (Eventually)
+
+%h2 Student Info
+%ul
+  %li
+    %b Name
+    = @student.name
+  %li
+    %b Email
+    = @student.email
+  %li
+    %b Username
+    = @student.nickname
+
+%footer= link_to 'Log Out', logout_url
