@@ -26,6 +26,7 @@ class ReflectionsController < ApplicationController
   def create
     @reflection = Reflection.new(reflection_params)
     @reflection.student = current_user
+    # @reflection.photo.attach(post_params[:photo])
     respond_to do |format|
       if @reflection.save
         format.html { redirect_to @reflection, notice: 'Reflection was successfully created.' }
@@ -69,6 +70,6 @@ class ReflectionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def reflection_params
-      params.require(:reflection).permit(:week, :title,  :reaction)
+      params.require(:reflection).permit(:week, :title, :reaction, :photo)
     end
 end
