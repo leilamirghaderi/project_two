@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
     private
     # Getter method for current user
     def current_user
-      @current_user ||= Student.find_by(uid: session[:uid])
+      @current_user || = Student.find_by(uid: session[:uid])
     end
     # Setter method for current user
     def current_user=(student)
