@@ -18,6 +18,6 @@ Reflection.destroy_all
   lastname: 'Sheikholeslami'
 )
 
-@one = Reflection.create(week: 12, title: 'Globalization of China', reaction: 'The economic globalization of China has transformed the nature of its national policy preferences, calling into question for the rest of the world what their true intentions might very well be.', student: @leila)
+@one = Reflection.create(week: 12, title: 'Globalization of China', reaction: 'The economic globalization of China has transformed the nature of its national policy preferences, calling into question for the rest of the world what their true intentions might very well be.', student: @student)
 
-@two = Reflection.create(week: 14, title: 'Globalization and Religion', reaction: 'The twenty-first century is witnessing a resurgence and globalization of religion.', student: @mehrdad)
+@two = Reflection.create(week: 14, title: 'Globalization and Religion', reaction: 'The twenty-first century is witnessing a resurgence and globalization of religion.', student: @student)
