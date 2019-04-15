@@ -1,7 +1,5 @@
 class ApplicationController < ActionController::Base
   helper_method :current_user
-<<<<<<< HEAD
-<<<<<<< HEAD
   private
   # Getter method for current User
     # Getter method for current user
@@ -23,5 +21,4 @@ class ApplicationController < ActionController::Base
         redirect_to login_url, notice: "Please log in first"
       end
     end
-
   end
