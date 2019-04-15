@@ -26,7 +26,7 @@ class ReflectionsController < ApplicationController
   def create
     @reflection = Reflection.new(reflection_params)
     @reflection.student = current_user
-    # @reflection.photo.attach(post_params[:photo])
+    @reflection.photo.attach(reflection_params[:photo])
     respond_to do |format|
       if @reflection.save
         format.html { redirect_to @reflection, notice: 'Reflection was successfully created.' }
