@@ -3,6 +3,7 @@ require 'test_helper'
 class ReflectionsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @reflection = reflections(:one)
+    login_with('github')
   end
 
   test "should get index" do
@@ -17,9 +18,9 @@ class ReflectionsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create reflection" do
     assert_difference('Reflection.count') do
-      post reflections_url, params: { reflection: { week: @reflection.week, title: @reflection.title, reaction: @reflection.reaction, student_name: @reflection.student.name } }
+      post reflections_url, params: { reflection: { week: @reflection.week, title: @reflection.title, reaction: @reflection.reaction } }
     end
-
+    assert_equal(Reflection.last.student,students(:leila))
     assert_redirected_to reflection_url(Reflection.last)
   end
 
@@ -34,7 +35,7 @@ class ReflectionsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update reflection" do
-    patch reflection_url(@reflection), params: { reflection: { week: @reflection.week, title: @reflection.title, reaction: @reflection.reaction, student_name: @reflection.student.name } }
+    patch reflection_url(@reflection), params: { reflection: { week: @reflection.week, title: @reflection.title, reaction: @reflection.reaction } }
     assert_redirected_to reflection_url(@reflection)
   end
 
