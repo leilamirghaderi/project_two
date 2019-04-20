@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
         student.email = omni['info']['email']
       end
       self.current_user = @student
-      redirect_to reflections_url
+      redirect_to request.env['omniauth.origin'] || reflections_url
   end
   def login
   end
