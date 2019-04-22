@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class SessionsControllerTest < ActionDispatch::IntegrationTest
-  test "should redirect to posts URL on login" do
+  test "should redirect to reflections URL on login" do
     post '/auth/github/callback', params: OmniAuth.config.mock_auth[:github]
     assert_redirected_to reflections_url
   end
