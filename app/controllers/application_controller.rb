@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   helper_method :current_user
-    private
+  private
+  # Getter method for current User
     # Getter method for current user
     def current_user
       @current_user ||= Student.find_by(uid: session[:uid])
@@ -17,9 +18,7 @@ class ApplicationController < ActionController::Base
 
     def authenticate_user
       unless user_signed_in?
-        redirect_to login_url, notice: "Please log in first"
+        redirect_to github_auth_url(origin: request.url)
       end
     end
-
   end
-

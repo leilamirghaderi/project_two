@@ -3,8 +3,14 @@
 leila:
   firstname: Leila
   lastname: Mirghaderi
+  nickname: Leila Mirghaderi
+  uid: 23232
+  email: leila.mirghaderi@gmail.com
 
 
 mehrdad:
   firstname: Mehrdad
   lastname: Sheikholeslami
+  nickname: Mehrdad Sheikholeslami
+  uid: 45454
+  email: mehrdad.sheikholeslami@gmail.com
