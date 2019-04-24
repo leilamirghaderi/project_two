@@ -100,6 +100,13 @@ p {
   margin-left: px-to-em(5px);
   font-size: px-to-em(20px);
 }
+/*responsive images */
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
  /* State Styles (JavaScript-Dependent Styles, Media Queries) */
  @media screen and (min-width: 375px) {
   html {

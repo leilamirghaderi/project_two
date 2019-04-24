@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get '/login', to: 'sessions#login', as: 'login'
-  get '/logout', to: 'sessions#logout', as: 'logout'
+  get '/logout', to: 'sessions#login', as: 'logout'
   get '/auth/github', as: 'github_auth'
   match '/auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
   resources :reflections, constraints: { id: /\d+/ }

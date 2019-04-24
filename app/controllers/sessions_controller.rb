@@ -8,11 +8,7 @@ class SessionsController < ApplicationController
         student.nickname = omni['info']['nickname']
         student.email = omni['info']['email']
       end
-  end
-  def login
-  end
-  def logout
-    reset_session
-    redirect_to login_url, notice: "You have been logged out."
+      self.current_user = @student
+      redirect_to request.env['omniauth.origin'] || reflections_url
   end
 end

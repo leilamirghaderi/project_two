@@ -3,13 +3,14 @@
 %article
   %h3= @reflection.title
   %ul.info
-    %li= @reflection.student.name
     %li= @reflection.reaction
     %li= @reflection.week
-
-  %ul.controls
-    %li= link_to 'Edit', edit_reflection_path(@reflection)
-    %li= link_to 'Destroy', @reflection, method: :delete, data: { confirm: 'Are you sure?' }
+  - if @reflection.photo.attached?
+    %figure
+      = image_tag @reflection.photo	  
+%ul.controls
+%li= link_to 'Edit', edit_reflection_path(@reflection)
+%li= link_to 'Destroy', @reflection, method: :delete, data: { confirm: 'Are you sure?' }
 
 %footer
-  = link_to 'Back', reflections_path
+= link_to 'Back', reflections_path
