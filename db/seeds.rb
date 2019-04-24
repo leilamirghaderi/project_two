@@ -8,6 +8,7 @@
 
 Student.destroy_all
 Reflection.destroy_all
+
 @leila = Student.create(
   firstname: 'Leila',
   lastname: 'Mirghaderi'
