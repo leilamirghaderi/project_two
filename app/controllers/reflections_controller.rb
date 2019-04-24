@@ -1,7 +1,7 @@
 class ReflectionsController < ApplicationController
   before_action :set_reflection, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user, except: [:index, :show]
-  # GET /reflections
+  before_action :user_owns_reflection?, only: [:edit, :update, :destroy]
   # GET /reflections.json
   def index
     @reflections = Reflection.all
@@ -72,4 +72,12 @@ class ReflectionsController < ApplicationController
     def reflection_params
       params.require(:reflection).permit(:week, :title, :reaction, :photo)
     end
+
+    # Making sure users can only edit, destroy their own posts
+    # def user_owns_reflection?
+    #   unless @reflection.student.uid == current_user.uid
+    #     flash[:notice] = 'You may only edit your own reflections."
+    #     redirect_to reflections_url
+    #   end
+    # end
 end
