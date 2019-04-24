@@ -18,9 +18,10 @@ class ReflectionsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create reflection" do
     assert_difference('Reflection.count') do
-      post reflections_url, params: { reflection: { week: @reflection.week, title: @reflection.title, reaction: @reflection.reaction } }
+      post reflections_url, params: { reflection: { week: @reflection.week, title: @reflection.title, reaction: @reflection.reaction, photo: fixture_file_upload('files/theme-china-map.jpg')} }
     end
     assert_equal(Reflection.last.student,students(:leila))
+    assert Reflection.last.photo.attached?
     assert_redirected_to reflection_url(Reflection.last)
   end
 

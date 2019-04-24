@@ -14,7 +14,14 @@ class ReflectionTest < ActiveSupport::TestCase
     @reflection = reflections(:one)
     assert_equal @reflection.student_name, reflections(:one).student.name
   end
-
+  test "accepts a photo file attachment" do
+    @reflection = reflections(:one)
+    file = Rails.root.join('test','fixtures','files','theme-china-map.jpg')
+    @reflection.photo.attach(io: File.open(file),filename: 'theme-china-map.jpg')
+    assert @reflection.save
+    assert @reflection.valid?
+    assert @reflection.photo.attached?
+  end
   test "reflection responses to student_name setter" do
   @reflection = reflections(:one)
   @reflection.student_name = students(:leila).name
