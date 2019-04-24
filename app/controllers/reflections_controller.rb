@@ -74,10 +74,10 @@ class ReflectionsController < ApplicationController
     end
 
     # Making sure users can only edit, destroy their own posts
-    # def user_owns_reflection?
-    #   unless @reflection.student.uid == current_user.uid
-    #     flash[:notice] = 'You may only edit your own reflections."
-    #     redirect_to reflections_url
-    #   end
-    # end
+    def user_owns_reflection?
+      unless @reflection.student.uid == current_user.uid
+        flash[:notice] = 'You may only edit your own reflections.'
+        redirect_to reflections_url
+      end
+    end
 end

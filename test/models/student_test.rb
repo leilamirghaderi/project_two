@@ -2,10 +2,11 @@ require 'test_helper'
 
 class StudentTest < ActiveSupport::TestCase
   test "student fields must not be empty" do
-    Student = Student.new
-    assert Student.invalid?
-    assert Student.errors[:firstname].any?
-    assert Student.errors[:lastname].any?
+    student = Student.new
+    student.save
+    assert student.invalid?
+    assert student.errors[:firstname].any?
+    assert student.errors[:lastname].any?
  end
  setup do
    # Create instances for more readable, Rails-like tests
