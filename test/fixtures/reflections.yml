@@ -1,6 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  week: 13
+  title: 'Globalization of China2'
+  reaction: 'The second economic globalization of China has transformed the nature of its national policy preferences, calling into question for the rest of the world what their true intentions might very well be.'
+  student: leila
+good_reflection:
   week: 12
   title: 'Globalization of China'
   reaction: 'The economic globalization of China has transformed the nature of its national policy preferences, calling into question for the rest of the world what their true intentions might very well be.'
