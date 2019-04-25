@@ -31,29 +31,35 @@ html {
   line-height: px-to-em(24px);
   background-color: #D9B310;
   font: 100% $font-stack;
-  margin: px-to-em(10px);
+
+
 }
-h2 {
-  padding-left: px-to-em(25px);
+
+
+header {
+
+  margin-bottom: 2em;
 }
+
+
 h1 {
   font-size: px-to-em(35px);
   line-height: px-to-em(38px, 35px);
-  padding: px-to-em(10px);
   font-weight: bold;
+  margin: 1em;
 }
 h3 {
   font-size: px-to-em(22px);
   line-height: px-to-em(22px, 25px);
   font-weight: bold;
   color: #333A56;
-  padding-top: px-to-em(15px);
-  padding-bottom: px-to-em(15px);
-  padding-left: px-to-em(15px);
+  margin: 1em;
+}
+h2.login {
+  padding: 2em;
 }
 ul {
   margin: px-to-em(15px);
-  padding: px-to-em(5px);
   list-style: none;
 }
 li {
@@ -61,44 +67,52 @@ li {
   line-height: px-to-em(30px, 20px);
   color: #D9B310;
   background-color: #333A56;
-  border-radius: px-to-em(15px);
-  margin: px-to-em(10px);
-  padding-left: px-to-em(15px);
-  padding-top: px-to-em(5px);
+  margin: 1em 2em 0 2em;
+  padding: 1em;
+  max-width: 100%;
 }
+
+
+
+
 a {
   display: block;
-  padding: px-to-em(5px, 10px);
   text-decoration: underline;
   color: #ffffff;
 }
 ul.controls a {
   color: #ffffff;
 }
+
+p {
+ margin: 2em;
+}
+
 footer {
   font-size: px-to-em(15px);
-  padding-top: px-to-em(35px);
-  color: #333A56;
+  margin: 2em 0 2em 0;
+  color: #D9B310;
+  background-color: #333A56;
+  padding: 2em 2em 2em 2.5em;
 }
-footer a {
-  color: #333A56;
+
+input {
+  color:#333A56;
+  display: block;
 }
-p {
-  padding: px-to-em(25px, 25px);
+
+textarea {
+  display: block;
 }
 
 
 /* Layout Styles (Usually Landmark ID Selectors) */
 
 /* Modular Styles (Repeating Class Selectors) */
-.code a {
-  color: #76323F;
-  font-size: px-to-em(30px);
-  font-weight: bold;
-}
+
 .tagline{
-  margin-left: px-to-em(5px);
   font-size: px-to-em(20px);
+  margin-bottom: 2em;
 }
 /*responsive images */
 
@@ -109,19 +123,14 @@ img {
 
  /* State Styles (JavaScript-Dependent Styles, Media Queries) */
  @media screen and (min-width: 375px) {
-  html {
-    margin: px-to-em(35px);
-  }
+
+
 }
 @media screen and (min-width: 540px) {
- html {
-   margin: px-to-em(35px);
- }
+
 }
  @media screen and (min-width: 675px) {
-  html {
-    margin: px-to-em(35px);
-  }
+
   ul {
     display: grid;
     grid-auto-flow: row;
@@ -142,17 +151,16 @@ img {
 }
 @media screen and (min-width: 920px) {
   html {
-    margin: px-to-em(35px);
     font-size: px-to-em(25px);
   }
   h1 {
     font-size: px-to-em(35px);
+
   }
 }
 
 @media screen and (min-width: 1200px) {
   html {
-    margin: px-to-em(50px);
     font-size: px-to-em(25px);
   }
   h1 {

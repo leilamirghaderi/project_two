@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ReflectionsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @reflection = reflections(:one)
+    @reflection = reflections(:good_reflection)
     login_with('github')
   end
 
