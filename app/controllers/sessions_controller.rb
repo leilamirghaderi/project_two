@@ -9,9 +9,12 @@ class SessionsController < ApplicationController
         student.email = omni['info']['email']
       end
       self.current_user = @student
-      unless request.env['omniauth.origin'].include?('log')
-        redirect_to request.env['omniauth.origin']
-      end
       redirect_to reflections_url
+  end
+  def login
+  end
+  def logout
+    reset_session
+    redirect_to login_url, notice: "You have been logged out."
   end
 end
