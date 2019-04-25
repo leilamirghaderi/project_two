@@ -1,9 +1,11 @@
-
+- if @reflections.blank?
+  %p There are not any reflections currently in the system.
+- else
+  %h1 Latest reflections
 
 %header
   %p#notice= notice
-  %h1 Latest reflections
-  %p{:class => "code"}= link_to 'New Reflection', new_reflection_path
+  %p= link_to 'New Reflection', new_reflection_path
 
 %ul.reflections
   - @reflections.each do |reflection|
