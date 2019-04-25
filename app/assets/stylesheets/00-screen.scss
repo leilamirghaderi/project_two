@@ -54,7 +54,9 @@ h3 {
   font-weight: bold;
   color: #333A56;
   margin: 1em;
-
+}
+h2.login {
+  padding: 2em;
 }
 ul {
   margin: px-to-em(15px);
@@ -76,10 +78,10 @@ li {
 a {
   display: block;
   text-decoration: underline;
-  color: #333A56
+  color: #ffffff;
 }
 ul.controls a {
-  color: #333A56
+  color: #ffffff;
 }
 
 p {
