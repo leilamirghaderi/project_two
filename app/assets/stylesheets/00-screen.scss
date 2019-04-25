@@ -31,17 +31,10 @@ html {
   line-height: px-to-em(24px);
   background-color: #D9B310;
   font: 100% $font-stack;
-
-
 }
-
-
 header {
-
   margin-bottom: 2em;
 }
-
-
 h1 {
   font-size: px-to-em(35px);
   line-height: px-to-em(38px, 35px);
@@ -53,7 +46,7 @@ h3 {
   line-height: px-to-em(22px, 25px);
   font-weight: bold;
   color: #333A56;
-  margin: 1em;
+  margin: 2em;
 }
 h2.login {
   padding: 2em;
@@ -71,10 +64,6 @@ li {
   padding: 1em;
   max-width: 100%;
 }
-
-
-
-
 a {
   display: block;
   text-decoration: underline;
@@ -87,7 +76,6 @@ ul.controls a {
 p {
  margin: 2em;
 }
-
 footer {
   font-size: px-to-em(15px);
   margin: 2em 0 2em 0;
@@ -95,12 +83,10 @@ footer {
   background-color: #333A56;
   padding: 2em 2em 2em 2.5em;
 }
-
 input {
   color:#333A56;
   display: block;
 }
-
 textarea {
   display: block;
 }
@@ -109,13 +95,12 @@ textarea {
 /* Layout Styles (Usually Landmark ID Selectors) */
 
 /* Modular Styles (Repeating Class Selectors) */
-
 .tagline{
   font-size: px-to-em(20px);
   margin-bottom: 2em;
 }
-/*responsive images */
 
+/*responsive images */
 img {
   display: block;
   max-width: 100%;
