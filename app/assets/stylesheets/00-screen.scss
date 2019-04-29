@@ -49,8 +49,27 @@ h3 {
   margin: 2em;
 }
 h2.login {
-  padding: 2em;
+  margin: 2em;
+  background-color: #76323F;
+  border: none;
+  color: #ffffff;
+  padding: 5px 11px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+  cursor: pointer;
 }
+p.logout, h2.logout {
+  background-color: #76323F;
+  border: none;
+  color: #ffffff;
+  padding: 5px 11px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+  cursor: pointer;}
 ul {
   margin: px-to-em(15px);
   list-style: none;
@@ -72,9 +91,20 @@ a {
 ul.controls a {
   color: #ffffff;
 }
-
 p {
  margin: 2em;
+}
+p.new a {
+  background-color: #76323F;
+  border: none;
+  color: #ffffff;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: px-to-em(30px);
+  font-weight: bold;
+  cursor: pointer;
 }
 footer {
   font-size: px-to-em(15px);
@@ -105,15 +135,17 @@ img {
   display: block;
   max-width: 100%;
 }
-
  /* State Styles (JavaScript-Dependent Styles, Media Queries) */
- @media screen and (min-width: 375px) {
-
-
-}
-@media screen and (min-width: 540px) {
-
-}
+//  @media screen and (min-width: 375px) {
+//    html {
+//     margin: px-to-em(35px);
+//   }
+// }
+// @media screen and (min-width: 540px) {
+//   html {
+//   margin: px-to-em(35px);
+//   }
+// }
  @media screen and (min-width: 675px) {
 
   ul {
