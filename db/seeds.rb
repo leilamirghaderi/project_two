@@ -11,12 +11,18 @@ Reflection.destroy_all
 
 @leila = Student.create(
   firstname: 'Leila',
-  lastname: 'Mirghaderi'
+  lastname: 'Mirghaderi',
+  nickname: 'Leila Mirghaderi',
+  uid: 23232,
+  email: 'leila.mirghaderi@gmail.com'
 )
 
 @mehrdad = Student.create(
   firstname: 'Mehrdad',
-  lastname: 'Sheikholeslami'
+  lastname: 'Sheikholeslami',
+  nickname: 'Mehrdad Sheikholeslami',
+  uid: 45454,
+  email: 'mehrdad.sheikholeslami@gmail.com'
 )
 
 @one = Reflection.create(week: 12, title: 'Globalization of China', reaction: 'The economic globalization of China has transformed the nature of its national policy preferences, calling into question for the rest of the world what their true intentions might very well be.', student: @student)
