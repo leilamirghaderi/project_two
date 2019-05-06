@@ -5,7 +5,7 @@
 
 %header
   %p#notice= notice
-  %p= link_to 'New Reflection', new_reflection_path
+  %p.new= link_to 'New Reflection', new_reflection_path
 
 %ul.reflections
   - @reflections.each do |reflection|
