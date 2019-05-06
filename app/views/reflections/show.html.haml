@@ -7,9 +7,8 @@
   - if @reflection.photo.attached?
     %figure
       = image_tag @reflection.photo
-%ul.controls
-  %li= link_to 'Edit', edit_reflection_path(@reflection)
-  %li= link_to 'Destroy', @reflection, method: :delete, data: { confirm: 'Are you sure?' }
-
+  %ul.controls
+    %li= link_to 'Edit', edit_reflection_path(@reflection)
+    %li= link_to 'Destroy', @reflection, method: :delete, data: { confirm: 'Are you sure?' }
 %footer
 = link_to 'Back', reflections_path
