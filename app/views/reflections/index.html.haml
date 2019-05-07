@@ -15,7 +15,7 @@
         %ul.info
           %li= reflection.student.name
           %li= reflection.reaction
-          %li= reflection.week
+          %li= "Week: #{reflection.week}"
         %ul.controls
           %li= link_to 'Edit', edit_reflection_path(reflection)
           %li= link_to 'Destroy', reflection, method: :delete, data: { confirm: 'Are you sure?' }
