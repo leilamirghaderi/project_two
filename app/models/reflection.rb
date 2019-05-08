@@ -1,7 +1,7 @@
 class Reflection < ApplicationRecord
   belongs_to :student
 
-  has_one_attached :photo 
+  has_one_attached :photo
 
   validates :reaction, :title, :week, :student_id, presence: true
   validates :week,
