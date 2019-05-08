@@ -79,7 +79,7 @@ li {
   line-height: px-to-em(30px, 20px);
   color: #D9B310;
   background-color: #333A56;
-  margin: 1em 2em 0 2em;
+  margin: 1em;
   padding: 1em;
   max-width: 100%;
 }
@@ -108,7 +108,7 @@ p.new a {
 }
 footer {
   font-size: px-to-em(15px);
-  margin: 2em 0 2em 0;
+  margin: 2em 0 0 0;
   color: #D9B310;
   background-color: #333A56;
   padding: 2em 2em 2em 2.5em;
@@ -146,6 +146,27 @@ img {
 //   margin: px-to-em(35px);
 //   }
 // }
+
+
+ // iphones and mobile
+@media screen and (min-width: 300px) {
+
+
+  ul {
+    margin: 0em;
+  }
+
+  li {
+margin: 1em 0 1em 0;
+
+  }
+
+  ul.controls {
+    display: inline;
+  }
+}
+
+// ipads and small screens
  @media screen and (min-width: 675px) {
 
   ul {
@@ -172,15 +193,31 @@ img {
   }
   h1 {
     font-size: px-to-em(35px);
-
+  }
+  ul {
+    margin: 0 1em 0 1em;
+    list-style: none;
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1100px) {
   html {
     font-size: px-to-em(25px);
   }
   h1 {
     font-size: px-to-em(35px);
+  }
+  ul {
+    margin: 0 2em 0 2em;
+    list-style: none;
+  }
+  li {
+    font-size: px-to-em(20px);
+    line-height: px-to-em(30px, 20px);
+    color: #D9B310;
+    background-color: #333A56;
+    margin: 1em;
+    padding: 1em;
+    max-width: 100%;
   }
 }
